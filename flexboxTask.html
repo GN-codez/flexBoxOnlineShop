@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--GETTING MY FONT FROM GOOGLE-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One">
+        <style>
+            /* STYLING THE PAGE */
+            body {
+                font-family: "Julius Sans One", sans-serif;
+            }
+
+            h3:hover, h2:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            #headerDiv {
+                background-color: gray;
+                height: 50px;
+                
+                /* SETTING THE WIDTH OF AN ELEMENT TO AUTO ALLOWS IT TO RESPOND TO THE WIDTH
+                OF THE PAGE AT THE TIME */
+                width: auto;
+            }
+            #mainHead {
+                color: white;
+                text-align: center;
+            }
+
+            .head2s {
+                display: inline;
+            }
+
+            .sepPs{
+                display: inline;
+            }
+
+            #catDiv {
+                text-align: center;
+            }
+
+            .productImg{
+                display: inline-block;
+                text-align: center;
+            }
+
+            .image {
+                opacity: 1;
+
+                /* ASSIGNING FLEX TO TH DISPLAY PROPERTY WILL ALLOW THE IMAGES TO ADJUST
+                TO THE AMOUNT OF SPACE THEY HAVE */
+                display: flex;
+
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                top: 50%;
+                text-align: center;
+            }
+
+            .productImg:hover .image {
+            opacity: 0.3;
+            cursor: pointer;
+            }
+
+            .productImg:hover .middle {
+                opacity: 1;
+                cursor: pointer;
+            }
+
+
+            .text {
+                background-color: black;
+                margin: auto;
+                color: white;
+                font-size: 16px;
+                padding: 16px 32px;
+                text-align: center;
+                }
+
+        </style>
+    </head>
+    <body>
+        <div id="headerDiv">
+            <h1 id="mainHead">CATEGORIES</h1>
+        </div>
+            <br/>
+
+            <!--HERE ARE OUR FIVE CATEGORIES ON OUR 'ONLINE SHOP'-->
+
+        <div id="catDiv">
+            <h3 class="head2s">FEATURED</h3>
+
+            <p class="sepPs">|</p>
+
+            <h3 class="head2s">MEN</h3>
+
+            <p class="sepPs">|</p>
+
+            <h3 class="head2s">WOMEN</h3>
+
+            <p class="sepPs">|</p>
+
+            <h3 class="head2s">CHILDREN & BABIES</h3>
+
+            <p class="sepPs">|</p>
+
+            <h3 class="head2s">PLUS SIZE</h3>
+        </div>
+
+        <h2>HOT IN THE UK 🔥</h2>
+        <div>
+
+            <!--THESE THREE PARENT DIVS CONTAIN THE ELEMENTS I'LL BE USING FLEXBOX ON,
+            IN THIS CASE, THREE IMAGES-->
+
+            <div class="productImg">
+                <img class="image" src="newDress.png" width="415px" height="290px"/>
+                <p >£99.99</p>
+
+                <div class="middle">
+                    <div class="text">CRIMSON RED WOMEN'S DRESS</div>
+                  </div>
+            </div>
+
+            <div class="productImg">
+                <img class="image" src="hatImg.png" width="430px" height="290px"/>
+                <p >£79.99</p>
+
+                <div class="middle">
+                    <div class="text">WOMEN'S GREY EXTRA <br/> LARGE SUN HAT</div>
+                  </div>
+            </div>
+
+            <div class="productImg">
+                <img class="image" src="cropTop.png" width="350px" height="300px"/>
+                <p>£199.99</p>
+
+                <div class="middle">
+                    <div class="text">FULL WOMEN'S CONTEMPORARY OUTFIT</div>
+                  </div>
+            </div>
+        </div>
+    </body>
+</html>
